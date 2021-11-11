@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 import { Link, Route, Switch, useRouteMatch } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 import AddProduct from '../AddProduct/AddProduct';
 import AdminPanel from '../AminPanel/AdminPanel';
 import DashbordHome from '../DashboardHome/DashbordHome';
@@ -25,6 +26,7 @@ function Dashboard(props) {
     
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
+    const {admin , logout , user} = useAuth()
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -36,20 +38,30 @@ function Dashboard(props) {
             <Divider />
                    {/* admin  */}
                    <Link to="/"><Button color="inherit">Back to home</Button></Link> <br />
-              <Box>
+                {
+                    admin &&   <Box>
                     <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link> <br />
                   
                    <Link to={`${url}/addProduct`}><Button color="inherit">Add Product</Button></Link> <br />
                    <Link to={`${url}/manageOrder`}><Button color="inherit">Manage All Orders</Button></Link> <br />
                 </Box>
+                }
                     {/* not andin  */}
-                <Box>
-                <Link to={`${url}/order`}><Button color="inherit">My Orders</Button></Link> <br />
-                   <Link to={`${url}/pay`}><Button color="inherit">Pay</Button></Link> <br />
-                   <Link to={`${url}/review`}><Button color="inherit">Reviews</Button></Link>
-                </Box>
+               {
+                   !admin &&
+                   <Box>
+                   <Link to={`${url}/order`}><Button color="inherit">My Orders</Button></Link> <br />
+                      <Link to={`${url}/pay`}><Button color="inherit">Pay</Button></Link> <br />
+                      <Link to={`${url}/review`}><Button color="inherit">Reviews</Button></Link>
+                   </Box>
+               }
                 <Divider />
-                <Button>Log out</Button>
+
+               {
+                   user.email ?  <Button style={{background:'#000' , color:'#fff' , padding:'5px 20px'}} onClick={logout}>Log out</Button> : <Link to="/login">
+                       <Button style={{background:'purple' , color:'#fff' , padding:'5px 20px'}} >Log in now </Button>
+                   </Link>
+               }
           
             
             
@@ -78,9 +90,11 @@ function Dashboard(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap component="div">
-                        Dashboard
-                    </Typography>
+                   {
+                       user.email &&<Typography variant="h6" noWrap component="div">
+                           {user.displayName} 's DASHBOARD
+                       </Typography>
+                   }
                 </Toolbar>
             </AppBar>
             <Box

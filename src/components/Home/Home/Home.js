@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeProduct from '../../Product/HomeProduct/HomeProduct';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import Banner from '../Banner/Banner';
@@ -9,12 +10,13 @@ import Policy from './Policy/Policy';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
-            <Banner></Banner>
-           <Policy></Policy>
-           <Edition></Edition>
-            <Testimonial></Testimonial>
-            <Footer></Footer>
+             <Header></Header>
+             <Banner></Banner>
+             <Policy></Policy>
+             <HomeProduct></HomeProduct>
+             <Edition></Edition>
+             <Testimonial></Testimonial>
+             <Footer></Footer>
         </div>
     );
 };

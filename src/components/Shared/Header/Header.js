@@ -17,8 +17,8 @@ const Header = () => {
         navbarScroll
       >
         <NavLink to="/home">Home </NavLink>
-        <NavLink to="/home"> Services</NavLink>
-        <NavLink to="/home">Add services</NavLink>
+        <NavLink to="/products"> Our products</NavLink>
+        <NavLink to="/about">About us</NavLink>
         {
           user.email && <NavLink to="/dashboard">Dashboard</NavLink>
         }

@@ -3,9 +3,9 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const SingleProduct = ({product}) => {
+const HomeProducts = ({product}) => {
     const {name , url , description,  price , _id} = product;
     return (
         <Grid item md={4} xs={12}>
@@ -13,26 +13,24 @@ const SingleProduct = ({product}) => {
 
 
            <img style={{width:'350px'  , height:'300px'}} src={url} alt="" />
-            <Typography sx={{color:'red', fontWeight:'bold', fontSize:'18px' , padding:'10px 0' ,}} variant="body2" color="text.secondary">
+            <Typography sx={{color:'red', fontWeight:'bold', fontSize:'18px' , padding:'10px 0' ,}}  variant="body2" color="text.secondary">
                 {name}
            </Typography>
             
             <Typography variant="body2" color="text.secondary">
                 {description}
            </Typography>
-            <Typography sx={{color:'green', fontWeight:'bold' , padding:'10px 0' ,}} variant="body2" color="text.secondary">
+            <Typography sx={{color:'green', fontWeight:'bold', fontSize:'15px' , padding:'10px 0' ,}}  variant="body2" color="text.secondary">
                $ {price}
            </Typography>
-
-                <NavLink  to={`/products/${_id}`}>
-                    
-                <Button style={{background:'salmon', padding:'10px 20px' , margin:'15px 0' ,border:'none'}}>purches now</Button>
-
-                </NavLink>
+        <Link to={`/products/${_id}`}>
+        
+        <Button style={{background:'salmon', padding:'10px 20px' , margin:'15px 0' ,border:'none'}}>purches now</Button>
+        </Link>
 
             </Paper>
       </Grid>
     );
 };
 
-export default SingleProduct;
+export default HomeProducts;

@@ -26,8 +26,6 @@ const AdminPanel = () => {
         .then(data =>{
             if(data.modifiedCount){
                     setSuucess(true);
-                
-                    console.log(data);
             }
         })
         e.preventDefault();

@@ -64,3 +64,30 @@
      font-size: 18px;
    
 }
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.form-area input {
+    width: 60%;
+    margin: 10px 0;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.form-area textarea{
+    width: 60%;
+    margin: 10px 0;
+    padding: 40px 10px;
+    border-radius: 10px;
+    border: none;
+}
+.form-area {
+    background-color: blanchedalmond;
+    padding: 60px 50px;
+   
+}
