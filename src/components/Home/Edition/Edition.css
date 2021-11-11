@@ -1,0 +1,30 @@
+.edition .bg{
+    background: #F1DDCB;
+}
+.edition .style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  50px;
+}
+.img-fluid{
+    object-fit: cover;
+}
+.edition h6 {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    color: rgb(76, 71, 72);
+}
+.edition h2{
+    padding: 20px 0;
+    color:rebeccapurple;
+    font-weight: bold;
+}
+.edition-btn{
+    background-color: hotpink;
+    outline: none;
+    border-radius: 5px;
+    border:none;
+    padding: 10px 30px;
+}

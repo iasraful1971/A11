@@ -1,0 +1,66 @@
+
+/* home  */
+
+.banner {
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url('../../../images/bg.jpeg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.banner h2 {
+    color: #fff;
+    font-size:3rem;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.banner p {
+    width: 50%;
+    color: #fff;
+    
+    line-height: 25px;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size:16px;
+}
+
+.banner a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+}
+.home-btn button{
+    background: rgb(73, 4, 73);
+    padding: 15px 40px;
+    border-radius: 10px;
+    border:none;
+    outline: none;
+    color: linen;
+    font-weight: 500;
+    font-size: 16px;
+}
+.home-btn .btn2{
+    margin-left: 10px;
+    background: rgb(209, 162, 7);
+    color: linen;
+}
+.drawer a{
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+     text-align: left;
+     font-size: 18px;
+   
+}

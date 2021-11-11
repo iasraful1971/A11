@@ -1,9 +1,20 @@
 import React from 'react';
+import Footer from '../../Shared/Footer/Footer';
+import Header from '../../Shared/Header/Header';
+import Banner from '../Banner/Banner';
+import Edition from '../Edition/Edition';
+import Testimonial from '../Testimonial/Testimonial/Testimonial';
+import Policy from './Policy/Policy';
 
 const Home = () => {
     return (
         <div>
-            <h2>This is main home</h2>
+            <Header></Header>
+            <Banner></Banner>
+           <Policy></Policy>
+           <Edition></Edition>
+            <Testimonial></Testimonial>
+            <Footer></Footer>
         </div>
     );
 };

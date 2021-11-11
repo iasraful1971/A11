@@ -1,0 +1,29 @@
+.navbar{
+    background-color: #F1DDCB;
+    padding: 20px 0;
+}
+.navbar a {
+    text-decoration: none;
+    color: rgb(37, 13, 13);
+    margin-right: 15px;
+    font-weight: 500;
+}
+.brand{
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 10px;
+    
+    
+}
+.span{
+    color: rgb(97, 10, 23);
+    text-shadow: rgb(75, 5, 5);
+}
+.login{
+    outline: none;
+    border-radius: 2px;
+    border: none;
+    background: #000;
+    color: linen;
+    padding: 5px 30px;
+}
